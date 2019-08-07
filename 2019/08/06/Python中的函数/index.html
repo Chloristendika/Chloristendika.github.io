@@ -7,16 +7,19 @@
 
 
 
-    <meta name="keywords" content="编程,Python,学习笔记,函数">
+    <meta name="description" content="Python 中的函数python 中的函数用关键字 ‘def’ 来定义，如下是一个求阶乘的函数 12345def fac(num):    ans = 1    for i in range(2, num + 1):        ans *= i    return ans">
+<meta name="keywords" content="编程,Python,学习笔记,函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python中的函数">
 <meta property="og:url" content="http://yoursite.com/2019/08/06/Python中的函数/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Python 中的函数python 中的函数用关键字 ‘def’ 来定义，如下是一个求阶乘的函数 12345def fac(num):    ans = 1    for i in range(2, num + 1):        ans *= i    return ans">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-06T08:05:24.741Z">
+<meta property="og:updated_time" content="2019-08-07T01:15:59.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的函数">
+<meta name="twitter:description" content="Python 中的函数python 中的函数用关键字 ‘def’ 来定义，如下是一个求阶乘的函数 12345def fac(num):    ans = 1    for i in range(2, num + 1):        ans *= i    return ans">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -148,7 +151,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    3 minutes read (About 439 words)
                 </span>
                 
                 
@@ -161,7 +164,39 @@
             
         </h1>
         <div class="content">
-            
+            <h2 id="Python-中的函数"><a href="#Python-中的函数" class="headerlink" title="Python 中的函数"></a>Python 中的函数</h2><p>python 中的函数用关键字 ‘def’ 来定义，如下是一个求阶乘的函数</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fac</span><span class="hljs-params">(num)</span>:</span></span><br><span class="line">    ans = <span class="hljs-number">1</span></span><br><span class="line">    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, num + <span class="hljs-number">1</span>):</span><br><span class="line">        ans *= i</span><br><span class="line">    <span class="hljs-keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>python 中 函数可以有默认参数，当不传入参数时</p>
+<p>会自动引用默认定义的参数</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(a = <span class="hljs-number">0</span>, b = <span class="hljs-number">0</span>, c = <span class="hljs-number">0</span>)</span>:</span></span><br><span class="line">    <span class="hljs-keyword">return</span> a + b + c</span><br><span class="line"></span><br><span class="line">print(add()) <span class="hljs-comment">#输出0</span></span><br><span class="line">print(add(<span class="hljs-number">1</span>)) <span class="hljs-comment">#输出1</span></span><br><span class="line">print(add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)) <span class="hljs-comment">#输出6</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>当传入未知数量的参数时，可以使用可变参数</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(*args)</span>:</span></span><br><span class="line">    tot = <span class="hljs-number">0</span></span><br><span class="line">    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> args:</span><br><span class="line">        tot += i</span><br><span class="line">    <span class="hljs-keyword">return</span> tot</span><br><span class="line"></span><br><span class="line">print(add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)) <span class="hljs-comment">#输出 6</span></span><br><span class="line">print(add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)) <span class="hljs-comment"># 输出 15</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="同名函数的覆盖问题"><a href="#同名函数的覆盖问题" class="headerlink" title="同名函数的覆盖问题"></a>同名函数的覆盖问题</h3><p>如下定义中，第二个Say函数会覆盖第一个Say函数</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Say</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    print(<span class="hljs-string">"Hello World!\n"</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Say</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    print(<span class="hljs-string">"Goodbye World!\n"</span>)</span><br><span class="line"></span><br><span class="line">Say()</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 输出 Goodbye World!</span></span><br></pre></td></tr></table></figure>
+
+<p>在实际多人开发过程中，当两个人写的文件里都有</p>
+<p>同样一个名字的函数时，可以用 模块 调用</p>
+<p>每个文件就是一个模块</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment"># module1.py</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Say</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    print(<span class="hljs-string">"Hello World!\n"</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment"># module2.py</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Say</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    print(<span class="hljs-string">"Goodbye World!\n"</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> module1 <span class="hljs-keyword">import</span> Say</span><br><span class="line">Say() <span class="hljs-comment"># Hello World</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">from</span> module2 <span class="hljs-keyword">import</span> Say</span><br><span class="line">Say() <span class="hljs-comment"># Goodbye World</span></span><br></pre></td></tr></table></figure>
+
+<p>注意模块也会出现覆盖问题</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> module1 <span class="hljs-keyword">import</span> Say</span><br><span class="line"><span class="hljs-keyword">from</span> module2 <span class="hljs-keyword">import</span> Say</span><br><span class="line">Say() <span class="hljs-comment"># Goodbye World</span></span><br></pre></td></tr></table></figure>
+
+<p>可以用如下方式进行</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> module1 <span class="hljs-keyword">as</span> m1</span><br><span class="line"><span class="hljs-keyword">import</span> module2 <span class="hljs-keyword">as</span> m2</span><br><span class="line">m1.Say()</span><br><span class="line">m2.Say()</span><br></pre></td></tr></table></figure>
+
+<h3 id="name-‘maint‘"><a href="#name-‘maint‘" class="headerlink" title="name == ‘maint‘"></a><strong>name</strong> == ‘<strong>maint</strong>‘</h3><p>当程序在导入一个模块时，如果这个模块里有可执行程序</p>
+<p>就会自动执行，为了避免这个情况，可以在程序里的执行程序中加入</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Say</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    <span class="hljs-keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">asdf</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    <span class="hljs-keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># __name__是Python中一个隐含的变量它代表了模块的名字</span></span><br><span class="line"><span class="hljs-comment"># 只有被Python解释器直接执行的模块的名字才是__main__</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:</span><br><span class="line">    print(<span class="hljs-string">"这个函数被解释器调用了"</span>)</span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
